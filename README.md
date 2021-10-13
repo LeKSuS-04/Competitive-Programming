@@ -1,5 +1,5 @@
-# Problems
-Solutions to some of the problems and my overall progress on different online judge platforms
+# Competitive Programming
+This repository contains my solutions to some of the problems and my overall progress on different online judge platforms
 
 ## Programming language
 Although most solutions are programmed in C++, that's not always the case; some might use other languages.
