@@ -1,0 +1,71 @@
+/* Problem No. 6 */
+// https://informatics.msk.ru/mod/statements/view.php?chapterid=6#1
+// Date: 2021-10-18 07:10:54
+// Max proccessor time: 0.007
+// Max memory usage: 2031616
+// Verdict: AC
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+}
+
+#include <iostream>
+#include <queue>
+#include <utility>
+#include <vector>
+using namespace std;
+typedef pair<int, int> ii;
+
+const int INF = 1e9;
+
+int main() {
+    int n, src, dst;
+    cin >> n >> src >> dst;
+    --src; --dst;
+
+    vector<vector<ii>> AL(n);
+    for (int u = 0; u < n; u++) {
+        for (int v = 0; v < n; v++) {
+            int w;
+            cin >> w;
+            if (w > 0) AL[u].push_back({v, w});
+        }
+    }
+
+    priority_queue<ii, vector<ii>, greater<ii>> pq;
+    vector<int> dist(n, INF);
+    vector<int> p(n, -1);
+    dist[src] = 0;
+    pq.push({0, src});
+
+    while (!pq.empty()) {
+        ii u = pq.top(); pq.pop();
+
+        if (u.first != dist[u.second]) continue;
+
+        for (auto&& v : AL[u.second]) {
+            if (dist[v.first] > dist[u.second] + v.second) {
+                p[v.first] = u.second;
+                dist[v.first] = dist[u.second] + v.second;
+                pq.push({dist[v.first], v.first});
+            }
+        }
+    }
+
+    if (dist[dst] == INF) cout << "-1\n";
+    else {
+        vector<int> path;
+        path.push_back(dst + 1);
+        while (dst != src) {
+            path.push_back(p[dst] + 1);
+            dst = p[dst];
+        }
+
+        for (int i = path.size() - 1; i >= 0; i--)
+            cout << path[i] << " ";
+        cout << endl;
+    }
+}
