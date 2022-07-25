@@ -62,5 +62,5 @@ jobs:
         with:
           add: .
           message: Update badge
-          pull: --rebase
+          pull: --rebase --autostash
           new_branch: ${{ env.BADGE_BRANCH }}
