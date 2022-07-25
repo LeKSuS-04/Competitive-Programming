@@ -57,17 +57,9 @@ jobs:
         with:
           name: ${{ env.ARTIFACT_NAME }}
 
-      - name: Commit badge
-        continue-on-error: false
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add --all
-          git commit -m "Update badges"
-
-      - name: Push badge commit
-        uses: ad-m/github-push-action@master
-        if: ${{ success() }}
+      - name: Add and commit changes
+        uses: EndBug/add-and-commit@v9 
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ env.BADGE_BRANCH }}
+          add: .
+          message: "Update badge"
+          new_branch: ${{ env.BADGE_BRANCH }}
