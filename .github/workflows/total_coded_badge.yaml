@@ -22,7 +22,7 @@ jobs:
         run: mkdir -p .github/badges
 
       - name: Generate badge
-        uses: jaywcjlove/generated-badges@main
+        uses: emibcn/badge-action@v1.2.1
         with:
           label: Problems solved
           status: ${{ env.SOLVED }}
@@ -31,8 +31,24 @@ jobs:
           style: flat
           output: .github/badges/total-solved.svg
 
-      - name: Commit changes to master
-        uses: stefanzweifel/git-auto-commit-action@v4
+      - name: Upload badge as artifact
+        uses: actions/upload-artifact@v2
         with:
-          commit_message: ${{ github.event.head_commit.message }}
-          branch: master
+          name: badge
+          if-no-files-found: error
+
+      - name: Commit badge
+        continue-on-error: false
+        env:
+          BADGE: ${{ steps.coverage.outputs.path }}
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .github/badges/total-solved.svg
+          git commit -m "Add/Update badge"
+      - name: Push badge commit
+        uses: ad-m/github-push-action@master
+        if: ${{ success() }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: badges
