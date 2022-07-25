@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Calculate amount of problems solved
-        run: SOLVED=$(find . -type f | grep -E '*\.(cpp|py)')
+        run: echo "SOLVED=$(find . -type f | grep -E '*\.(cpp|py)')" >> $GITHUB_ENV
 
       - name: Create directory for badges
         run: mkdir -p .github/badges
