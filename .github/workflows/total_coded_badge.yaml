@@ -1,0 +1,35 @@
+name: Add badge with total amount of problems solved
+
+on:
+  push: 
+    branches:
+      - master
+      - test-ci
+
+jobs:
+  add-badge:
+    name: Add badge
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Calculate amount of problems solved
+        run: SOLVED=$(find . -type f | grep -E '*\.(cpp|py)')
+
+      - name: Create directory for badges
+        run: mkdir -p .github/badges
+
+      - name: Generate badge
+        uses: jaywcjlove/generated-badges@main
+        with:
+          label: Problems solved
+          status: ${{ env.SOLVED }}
+          color: red
+          scale: 2
+          output: .github/badges/total-solved.svg
+
+      - name: Commit changes to master
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Update problem counter
