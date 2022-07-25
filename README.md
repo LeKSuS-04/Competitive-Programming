@@ -1,8 +1,9 @@
 # Competitive Programming
-This repository contains my solutions to some of the problems and my overall progress on different online judge platforms
+![Total problems solved badge](.github/badges/total-solved.svg)
 
-## Programming language
-Although most solutions are programmed in C++, that's not always the case; some might use other languages.
+This repository contains my solutions to some of the problems from various 
+competetive programming platforms, such as CodeForces, CodeChef, etc.
 
-## Solution headers
-Every problem solution in this repository is headed with some information about it. There will always be name of the problem, link to it and date/time of the submission. Other headers might vary; however they usually will contain information about run time, usage of memory and other technical details, provided by online judge
+Each and every solution has information about the problem at the top. I put
+link to the problem there, as well as technical parts of a solution, such
+as verdict, run time, memory consumption, etc.
