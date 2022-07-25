@@ -57,7 +57,10 @@ jobs:
         
       - name: Checkout to badge branch, or create it, if doesn't exist
         run: git checkout ${{ env.BADGE_BRANCH }} || git checkout --orphan ${{ env.BADGE_BRANCH }}
-
+      
+      - name: Clean old files
+        run: git rm -rf .
+      
       - name: Download artifact
         uses: actions/download-artifact@v3
         with:
