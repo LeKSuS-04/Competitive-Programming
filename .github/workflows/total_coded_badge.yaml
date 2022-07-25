@@ -52,17 +52,11 @@ jobs:
     env:
       BADGE_BRANCH: badges
     steps:
-      - name: Ensure branch with badges exists
-        uses: peterjgrainger/action-create-branch@v2.2.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          branch: ${{ env.BADGE_BRANCH }}
-      
-      - name: Checkout to branch with badges
+      - name: Checkout
         uses: actions/checkout@v3
-        with:
-          ref: ${{ env.BADGE_BRANCH }}
+        
+      - name: Checkout to badge branch, or create it, if doesn't exist
+        run: git checkout ${{ env.BADGE_BRANCH }} || git checkout --orphan ${{ env.BADGE_BRANCH }}
 
       - name: Download artifact
         uses: actions/download-artifact@v3
