@@ -1,20 +1,20 @@
-<svg width="298.2" height="40" viewBox="0 0 1491 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Problems solved: :status">
-  <title>Problems solved: :status</title>
+<svg width="263" height="40" viewBox="0 0 1315 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Problems solved: 214">
+  <title>Problems solved: 214</title>
   <linearGradient id="a" x2="0" y2="100%">
     <stop offset="0" stop-opacity=".1" stop-color="#EEE"/>
     <stop offset="1" stop-opacity=".1"/>
   </linearGradient>
-  <mask id="m"><rect width="1491" height="200" rx="30" fill="#FFF"/></mask>
+  <mask id="m"><rect width="1315" height="200" rx="30" fill="#FFF"/></mask>
   <g mask="url(#m)">
     <rect width="1005" height="200" fill="#555"/>
-    <rect width="486" height="200" fill="#E43" x="1005"/>
-    <rect width="1491" height="200" fill="url(#a)"/>
+    <rect width="310" height="200" fill="#E43" x="1005"/>
+    <rect width="1315" height="200" fill="url(#a)"/>
   </g>
   <g aria-hidden="true" fill="#fff" text-anchor="start" font-family="Verdana,DejaVu Sans,sans-serif" font-size="110">
     <text x="60" y="148" textLength="905" fill="#000" opacity="0.25">Problems solved</text>
     <text x="50" y="138" textLength="905">Problems solved</text>
-    <text x="1060" y="148" textLength="386" fill="#000" opacity="0.25">:status</text>
-    <text x="1050" y="138" textLength="386">:status</text>
+    <text x="1060" y="148" textLength="210" fill="#000" opacity="0.25">214</text>
+    <text x="1050" y="138" textLength="210">214</text>
   </g>
   
 </svg>
