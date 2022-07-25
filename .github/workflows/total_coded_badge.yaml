@@ -5,9 +5,12 @@ on:
     branches:
       - test-ci
 
+env:
+  SOLVED: unknown
+
 jobs:
-  add-badge:
-    name: Add badge
+  count-solveds:
+    name: Count solved problems
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -17,7 +20,11 @@ jobs:
 
       - name: Calculate amount of problems solved
         run: echo "SOLVED=$(find . -type f | grep -E '*\.(cpp|py)' | wc -l)" >> $GITHUB_ENV
-
+  
+  update-badge:
+    name: Update badge
+    runs-on: ubuntu-latest
+    steps:
       - name: Generate badge
         uses: emibcn/badge-action@v1.2.1
         with:
