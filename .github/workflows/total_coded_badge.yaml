@@ -61,5 +61,6 @@ jobs:
         uses: EndBug/add-and-commit@v9 
         with:
           add: .
-          message: "Update badge"
+          message: Update badge
+          pull: --rebase
           new_branch: ${{ env.BADGE_BRANCH }}
