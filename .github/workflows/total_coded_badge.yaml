@@ -3,34 +3,65 @@ name: Add badge with total amount of problems solved
 on:
   push: 
     branches:
-      - problems
+      - master
+
+env:
+  ARTIFACT_NAME: total-solved
 
 jobs:
-  add-badge:
-    name: Add badge
+  create-total-solved-badge:
+    name: Create total solved badge
     runs-on: ubuntu-latest
+    env:
+      BADGE_PATH: ./total-solved.svg 
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          ref: test-ci
 
-      - name: Calculate amount of problems solved
+      - name: Calculate amount of solved problems
         run: echo "SOLVED=$(find . -type f | grep -E '*\.(cpp|py)' | wc -l)" >> $GITHUB_ENV
-
-      - name: Create directory for badges
-        run: mkdir -p .github/badges
-
+  
       - name: Generate badge
-        uses: jaywcjlove/generated-badges@main
+        uses: emibcn/badge-action@v1.2.1
         with:
           label: Problems solved
           status: ${{ env.SOLVED }}
           color: red
           scale: 1
           style: flat
-          output: .github/badges/total-solved.svg
+          path: ${{ env.BADGE_PATH }}
 
-      - name: Commit changes to master
-        uses: stefanzweifel/git-auto-commit-action@v4
+      - name: Upload badge as an artifact
+        uses: actions/upload-artifact@v3
         with:
-          commit_message: ${{ github.event.head_commit.message }}
-          branch: master
+          name: ${{ env.ARTIFACT_NAME }}
+          path: ${{ env.BADGE_PATH }}
+  
+  commit-badge:
+    name: Commit badge to separate branch
+    runs-on: ubuntu-latest
+    needs: create-total-solved-badge
+    env:
+      BADGE_BRANCH: badges
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Clean old files
+        run: git rm -rf .
+      
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: ${{ env.ARTIFACT_NAME }}
+
+      - name: Add and commit changes
+        uses: EndBug/add-and-commit@v9 
+        with:
+          add: .
+          message: Update badge
+          default_author: github_actions
+          push: origin ${{ env.BADGE_BRANCH }} --set-upstream --force
+          new_branch: ${{ env.BADGE_BRANCH }}
