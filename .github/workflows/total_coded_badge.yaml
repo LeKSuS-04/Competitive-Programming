@@ -3,8 +3,7 @@ name: Add badge with total amount of problems solved
 on:
   push: 
     branches:
-      - master
-      - test-ci
+      - problems
 
 jobs:
   add-badge:
@@ -33,4 +32,5 @@ jobs:
       - name: Commit changes to master
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: Update problem counter
+          commit_message: ${{ github.event.head_commit.message }}
+          branch: master
