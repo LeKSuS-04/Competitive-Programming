@@ -6,29 +6,23 @@ on:
       - test-ci
 
 env:
-  SOLVED: unknown
   ARTIFACT_NAME: total-solved
 
 jobs:
-  count-solved:
-    name: Count solved problems
+  create-total-solved-badge:
+    name: Create total solved badge
     runs-on: ubuntu-latest
+    env:
+      BADGE_PATH: ./total-solved.svg 
     steps:
       - name: Checkout
         uses: actions/checkout@v3
         with:
           ref: test-ci
 
-      - name: Calculate amount of problems solved
+      - name: Calculate amount of solved problems
         run: echo "SOLVED=$(find . -type f | grep -E '*\.(cpp|py)' | wc -l)" >> $GITHUB_ENV
   
-  create-total-solved-badge:
-    name: Create total solved badge
-    runs-on: ubuntu-latest
-    needs: count-solved
-    env:
-      BADGE_PATH: ./total-solved.svg 
-    steps:
       - name: Generate badge
         uses: emibcn/badge-action@v1.2.1
         with:
