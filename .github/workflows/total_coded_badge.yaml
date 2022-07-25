@@ -3,7 +3,7 @@ name: Add badge with total amount of problems solved
 on:
   push: 
     branches:
-      - test-ci
+      - master
 
 env:
   ARTIFACT_NAME: total-solved
