@@ -62,5 +62,6 @@ jobs:
         with:
           add: .
           message: Update badge
+          default_author: github_actions
           push: origin ${{ env.BADGE_BRANCH }} --set-upstream --force
           new_branch: ${{ env.BADGE_BRANCH }}
