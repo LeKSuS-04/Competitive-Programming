@@ -1,5 +1,5 @@
 # Competitive Programming
-![Total problems solved badge](.github/badges/total-solved.svg)
+![Total problems solved badge](https://raw.githubusercontent.com/LeKSuS-04/Competitive-Programming/badges/total-solved.svg)
 
 This repository contains my solutions to some of the problems from various 
 competetive programming platforms, such as CodeForces, CodeChef, etc.

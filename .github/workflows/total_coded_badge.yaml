@@ -18,9 +18,6 @@ jobs:
       - name: Calculate amount of problems solved
         run: echo "SOLVED=$(find . -type f | grep -E '*\.(cpp|py)' | wc -l)" >> $GITHUB_ENV
 
-      - name: Create directory for badges
-        run: mkdir -p .github/badges
-
       - name: Generate badge
         uses: emibcn/badge-action@v1.2.1
         with:
@@ -29,15 +26,15 @@ jobs:
           color: red
           scale: 1
           style: flat
-          path: .github/badges/total-solved.svg
+          path: ./total-solved.svg
 
       - name: Commit badge
         continue-on-error: false
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add .github/badges/total-solved.svg
-          git commit -m "Add/Update badge"
+          git add ./total-solved.svg
+          git commit -m "Update badge"
 
       - name: Push badge commit
         uses: ad-m/github-push-action@master
