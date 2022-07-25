@@ -9,7 +9,7 @@ env:
   SOLVED: unknown
 
 jobs:
-  count-solveds:
+  count-solved:
     name: Count solved problems
     runs-on: ubuntu-latest
     steps:
@@ -24,6 +24,7 @@ jobs:
   update-badge:
     name: Update badge
     runs-on: ubuntu-latest
+    needs: count-solved
     steps:
       - name: Generate badge
         uses: emibcn/badge-action@v1.2.1
