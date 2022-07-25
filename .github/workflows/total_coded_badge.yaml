@@ -29,7 +29,7 @@ jobs:
           color: red
           scale: 1
           style: flat
-          output: .github/badges/total-solved.svg
+          path: .github/badges/total-solved.svg
 
       - name: Commit badge
         continue-on-error: false
