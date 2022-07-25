@@ -27,6 +27,7 @@ jobs:
           status: ${{ env.SOLVED }}
           color: red
           scale: 1
+          style: flat
           output: .github/badges/total-solved.svg
 
       - name: Commit changes to master
