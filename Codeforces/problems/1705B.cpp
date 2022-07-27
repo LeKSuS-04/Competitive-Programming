@@ -3,7 +3,7 @@
 // Date: Jul/27/2022 10:55
 // Run time: 358 ms
 // Memory: 1600 KB
-// Verdict: 
+// Verdict: AC
 
 #include <bits/stdc++.h>
 using namespace std;
