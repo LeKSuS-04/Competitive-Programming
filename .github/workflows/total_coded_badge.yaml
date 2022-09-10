@@ -19,7 +19,8 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Calculate amount of solved problems
-        run: echo "SOLVED=$(find . -type f | grep -E '*\.(cpp|py)' | wc -l)" >> $GITHUB_ENV
+        run: >
+          echo "SOLVED=$(cat $(find . -type f | grep -E '*\.(cpp|py)') | grep 'Verdict: AC' | wc -l)" >> $GITHUB_ENV
   
       - name: Generate badge
         uses: emibcn/badge-action@v1.2.1
