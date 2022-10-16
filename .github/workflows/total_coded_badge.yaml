@@ -1,7 +1,7 @@
 name: Add badge with total amount of problems solved
 
 on:
-  push: 
+  push:
     branches:
       - master
 
@@ -13,14 +13,15 @@ jobs:
     name: Create total solved badge
     runs-on: ubuntu-latest
     env:
-      BADGE_PATH: ./total-solved.svg 
+      BADGE_PATH: ./total-solved.svg
     steps:
       - name: Checkout
         uses: actions/checkout@v3
 
       - name: Calculate amount of solved problems
-        run: echo "SOLVED=$(find . -type f | grep -E '*\.(cpp|py)' | wc -l)" >> $GITHUB_ENV
-  
+        run: >
+          echo "SOLVED=$(grep -ri --include \*.cpp --include \*.py 'Verdict: AC' . | wc -l)" >> $GITHUB_ENV
+
       - name: Generate badge
         uses: emibcn/badge-action@v1.2.1
         with:
@@ -36,7 +37,7 @@ jobs:
         with:
           name: ${{ env.ARTIFACT_NAME }}
           path: ${{ env.BADGE_PATH }}
-  
+
   commit-badge:
     name: Commit badge to separate branch
     runs-on: ubuntu-latest
@@ -49,14 +50,14 @@ jobs:
 
       - name: Clean old files
         run: git rm -rf .
-      
+
       - name: Download artifact
         uses: actions/download-artifact@v3
         with:
           name: ${{ env.ARTIFACT_NAME }}
 
       - name: Add and commit changes
-        uses: EndBug/add-and-commit@v9 
+        uses: EndBug/add-and-commit@v9
         with:
           add: .
           message: Update badge
