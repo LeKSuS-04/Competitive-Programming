@@ -1,3 +1,10 @@
+/* 706B. Interesting drink */
+// https://codeforces.com/problemset/problem/706/B
+// Date: 2022-10-13 14:37:57
+// Run time: 592 ms
+// Memory: 372 KB
+// Verdict: AC
+
 #include <bits/stdc++.h>
 using namespace std;
 

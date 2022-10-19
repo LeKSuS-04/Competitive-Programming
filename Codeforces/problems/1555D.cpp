@@ -1,3 +1,10 @@
+/* D. Say No to Palindromes */
+// https://codeforces.com/problemset/problem/1555/D
+// Date: 2022-10-13 16:03:11
+// Run time: 46 ms
+// Memory: 964 KB
+// Verdict: AC
+
 #include <bits/stdc++.h>
 using namespace std;
 typedef unsigned long long ull;
