@@ -1,8 +1,8 @@
 /* D - Step Up Robot */
 // https://atcoder.jp/contests/abc289/tasks/abc289_d
 // Date: 2023-02-11 15:33:56
-// Run time: 7 ms
-// Memory: 3552 KB
+// Run time: 35 ms
+// Memory: 3800 KB
 // Verdict: AC
 
 #include <bits/stdc++.h>

@@ -1,8 +1,8 @@
-/* B - V */
-// https://atcoder.jp/contests/abc289/tasks/abc289_b
-// Date: 2023-02-11 15:11:07
-// Run time: 24 ms
-// Memory: 9044 KB
+/* C - Coverage */
+// https://atcoder.jp/contests/abc289/tasks/abc289_c
+// Date: 2023-02-11 15:28:45
+// Run time: 7 ms
+// Memory: 3552 KB
 // Verdict: AC
 
 #include <bits/stdc++.h>
