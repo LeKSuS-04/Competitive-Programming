@@ -1,42 +1,9 @@
-/* 1A. <name> */
+/* B - Звёзды */
 // https://codeforces.com/gym/100246/problem/A
-// Date:
-// Run time:
-// Memory:
-// Verdict:
-
-/** THIS TEST CASE MUST YIELD 1 YOU IDIOT
-3
-1 0 0 0 1
-1 0 0 1 1
-1 0 0 2 1
-1 0 1 0 1
-1 0 1 1 1
-1 0 1 2 1
-1 0 2 0 1
-1 0 2 1 1
-1 0 2 2 1
-1 1 0 0 1
-1 1 0 1 1
-1 1 0 2 1
-1 1 1 0 1
-1 1 1 1 1
-1 1 1 2 1
-1 1 2 0 1
-1 1 2 1 1
-1 1 2 2 1
-1 2 0 0 1
-1 2 0 1 1
-1 2 0 2 1
-1 2 1 0 1
-1 2 1 1 1
-1 2 1 2 1
-1 2 2 0 1
-1 2 2 1 1
-1 2 2 2 1
-2 2 2 2 2 2 2
-3
-*/
+// Date: 2023-02-27 16:05:26
+// Run time: 1402 ms
+// Memory: 17696 KB
+// Verdict: AC
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -59,12 +26,14 @@ class FenwickTree3D {
     }
 
     ll sum(ll x1, ll y1, ll z1, ll x2, ll y2, ll z2) {
-        // TODO: YOU DUMB FUCK
         return sum(x2, y2, z2)
             - sum(x2, y2, z1 - 1)
             - sum(x2, y1 - 1, z2)
             - sum(x1 - 1, y2, z2)
-            + 3 * sum(x1 - 1, y1 - 1, z1 - 1);
+            + sum(x2, y1 - 1, z1 - 1)
+            + sum(x1 - 1, y2, z1 - 1)
+            + sum(x1 - 1, y1 - 1, z2)
+            - sum(x1 - 1, y1 - 1, z1 - 1);
     }
 
     void add(ll x, ll y, ll z, ll val) {
