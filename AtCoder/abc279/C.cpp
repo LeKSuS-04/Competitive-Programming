@@ -1,3 +1,10 @@
+/* C - RANDOM */
+// https://atcoder.jp/contests/abc279/tasks/abc279_c
+// Date: 2022-11-26 15:10:51
+// Run time: 94 ms
+// Memory: 29404 KB
+// Verdict: AC
+
 #include <bits/stdc++.h>
 using namespace std;
 

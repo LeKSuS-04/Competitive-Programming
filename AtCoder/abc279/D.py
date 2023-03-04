@@ -1,3 +1,10 @@
+''' D - Freefall '''
+# https://atcoder.jp/contests/abc279/tasks/abc279_d
+# Date: 2022-11-26 15:29:36
+# Run time: 27 ms
+# Memory: 9132 KB
+# Verdict: AC
+
 from math import sqrt
 
 A, B = map(int, input().split())

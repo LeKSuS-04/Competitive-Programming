@@ -1,3 +1,10 @@
+/* E - Cheating Amidakuji */
+// https://atcoder.jp/contests/abc279/tasks/abc279_e
+// Date: 2022-11-26 16:36:05
+// Run time: 348 ms
+// Memory: 6336 KB
+// Verdict: AC
+
 #include <bits/stdc++.h>
 using namespace std;
 
