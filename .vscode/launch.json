@@ -1,0 +1,52 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "auto",
+      "type": "auto-debug",
+      "request": "launch",
+      "map": {
+        "*.py": "Python: Current File",
+        "*.cpp": "C/C++ - Build and debug active file"
+      }
+    },
+
+    {
+      "name": "C/C++ - Build and debug active file",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "/tmp/problem",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "miDebuggerPath": "/usr/bin/gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        },
+        {
+          "description": "display numbers in base 10",
+          "text": "set output-radix 10"
+        }
+      ],
+      "preLaunchTask": "C/C++: g++ build active file"
+    },
+
+    {
+      "name": "Python: Current File",
+      "type": "python",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "env": {
+        "LOCALENV": "1"
+      }
+    }
+  ]
+}
