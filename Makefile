@@ -1,4 +1,4 @@
 .PHONY: build
 
 build:
-	g++ -fdiagnostics-color=always -g $(SOURCE) -o /tmp/problem -DLOCALENV
+	g++ -fdiagnostics-color=always -g -DLOCALENV "$(SOURCE)" -o /tmp/problem
