@@ -43,7 +43,7 @@ void dfs(int u) {
 
 int main() {
 #ifdef LOCALENV
-    freopen("/home/leksus/Data/Competitive-Programming/IO/input.txt", "r", stdin);
+    freopen("/home/leksus/competitive-programming/IO/input.txt", "r", stdin);
 #else
     freopen("cycle2.in", "r", stdin);
     freopen("cycle2.out", "w", stdout);

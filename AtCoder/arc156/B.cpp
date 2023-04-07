@@ -38,7 +38,7 @@ ll C2(ll k, ll n) { return C(n - 1, n + k - 1); }
 
 int main() {
 #ifdef LOCALENV
-    freopen("/home/leksus/Data/Competitive-Programming/IO/input.txt", "r", stdin);
+    freopen("/home/leksus/competitive-programming/IO/input.txt", "r", stdin);
 #endif
     precompute_fact();
 

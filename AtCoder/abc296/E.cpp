@@ -38,7 +38,7 @@ void find_sccs(int u) {
 
 int main() {
 #ifdef LOCALENV
-    freopen("/home/leksus/Data/Competitive-Programming/IO/input.txt", "r", stdin);
+    freopen("/home/leksus/competitive-programming/IO/input.txt", "r", stdin);
 #endif
 
     int n;

@@ -71,7 +71,7 @@ ull solve(ull n) {
 
 int main() {
 #ifdef LOCALENV
-    freopen("/home/leksus/Data/Competitive-Programming/IO/input.txt", "r",
+    freopen("/home/leksus/competitive-programming/IO/input.txt", "r",
             stdin);
 #endif
 

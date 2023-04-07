@@ -25,7 +25,7 @@ int main() {
     cin.tie(NULL);
 
 #ifdef LOCALENV
-    freopen("/home/leksus/Data/Competitive-Programming/IO/input.txt", "r",
+    freopen("/home/leksus/competitive-programming/IO/input.txt", "r",
             stdin);
 #endif
 

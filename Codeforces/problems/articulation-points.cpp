@@ -33,7 +33,7 @@ void find_articulation_points(int u) {
 
 int main() {
 #ifdef LOCALENV
-    freopen("/home/leksus/Data/Competitive-Programming/IO/input.txt", "r", stdin);
+    freopen("/home/leksus/competitive-programming/IO/input.txt", "r", stdin);
 #else
     freopen("points.in", "r", stdin);
     freopen("points.out", "w", stdout);

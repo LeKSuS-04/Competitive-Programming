@@ -52,7 +52,7 @@
     "prefix": "freopen-in",
     "body": [
       "#ifdef LOCALENV",
-      "freopen(\"/home/leksus/Data/Competitive-Programming/IO/input.txt\", \"r\", stdin);",
+      "freopen(\"/home/leksus/competitive-programming/IO/input.txt\", \"r\", stdin);",
       "#endif",
       ""
     ],
@@ -64,7 +64,7 @@
     "prefix": "freopen-out",
     "body": [
       "#ifdef LOCALENV",
-      "freopen(\"/home/leksus/Data/Competitive-Programming/IO/output.txt\", \"w\", stdout);",
+      "freopen(\"/home/leksus/competitive-programming/IO/output.txt\", \"w\", stdout);",
       "#endif",
       ""
     ],
@@ -76,8 +76,8 @@
     "prefix": "freopen-all",
     "body": [
       "#ifdef LOCALENV",
-      "freopen(\"/home/leksus/Data/Competitive-Programming/IO/input.txt\", \"r\", stdin);",
-      "freopen(\"/home/leksus/Data/Competitive-Programming/IO/output.txt\", \"w\", stdout);",
+      "freopen(\"/home/leksus/competitive-programming/IO/input.txt\", \"r\", stdin);",
+      "freopen(\"/home/leksus/competitive-programming/IO/output.txt\", \"w\", stdout);",
       "#endif",
       ""
     ],

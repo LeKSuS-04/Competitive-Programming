@@ -49,7 +49,7 @@ class FenwickTree3D {
 
 int main() {
 #ifdef LOCALENV
-    freopen("/home/leksus/Data/Competitive-Programming/IO/input.txt", "r", stdin);
+    freopen("/home/leksus/competitive-programming/IO/input.txt", "r", stdin);
 #else
     freopen("stars.in", "r", stdin);
     freopen("stars.out", "w", stdout);

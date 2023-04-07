@@ -22,7 +22,7 @@ bool intercepts(ll k) { return (pow(b - k, 2) - 4.0 * a * c) >= e; }
 
 int main() {
 #ifdef LOCALENV
-    freopen("/home/leksus/Data/Competitive-Programming/IO/input.txt", "r", stdin);
+    freopen("/home/leksus/competitive-programming/IO/input.txt", "r", stdin);
 #endif
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);

@@ -15,7 +15,7 @@ const ull N = DIV * 16;
 
 int main() {
 #ifdef LOCALENV
-    freopen("/home/leksus/Data/Competitive-Programming/IO/input.txt", "r", stdin);
+    freopen("/home/leksus/competitive-programming/IO/input.txt", "r", stdin);
 #endif
 
     ull w, cnti[9], free[9], packs = 0;

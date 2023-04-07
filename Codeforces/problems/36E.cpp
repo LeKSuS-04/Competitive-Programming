@@ -104,7 +104,7 @@ void euler_path_to_index_vector(const list<int>& euler, vector<int>& indexes) {
 
 int main() {
 #ifdef LOCALENV
-    freopen("/home/leksus/Data/Competitive-Programming/IO/input.txt", "r", stdin);
+    freopen("/home/leksus/competitive-programming/IO/input.txt", "r", stdin);
 #else
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);

@@ -142,7 +142,7 @@ void solve() {
 
 signed main() {
 #ifdef LOCALENV
-    freopen("/home/leksus/Data/Competitive-Programming/IO/input.txt", "r", stdin);
+    freopen("/home/leksus/competitive-programming/IO/input.txt", "r", stdin);
 #endif
 
     ios_base::sync_with_stdio(false);

@@ -21,7 +21,7 @@ ll f(ll x, ll y) { return (qpow(x, y) + qpow(y, x)) % m; }
 
 int main() {
 #ifdef LOCALENV
-    freopen("/home/leksus/Data/Competitive-Programming/IO/input.txt", "r", stdin);
+    freopen("/home/leksus/competitive-programming/IO/input.txt", "r", stdin);
 #endif
 
     ll n;

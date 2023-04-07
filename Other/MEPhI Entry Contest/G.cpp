@@ -17,7 +17,7 @@ void read_with(int day, char type) {
 
 
 int main() { 
-    freopen("/home/leksus/Data/Competitive-Programming/IO/input.txt", "r", stdin);
+    freopen("/home/leksus/competitive-programming/IO/input.txt", "r", stdin);
     
     int n, na, nb, nc;
     cin >> n >> na >> nb >> nc;

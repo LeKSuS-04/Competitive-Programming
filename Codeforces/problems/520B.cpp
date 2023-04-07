@@ -22,7 +22,7 @@ bool add_and_check_if_reached_goal(int prev, int number, queue<int>& q,
 
 int main() {
 #ifdef LOCALENV
-    freopen("/home/leksus/Data/Competitive-Programming/IO/input.txt", "r", stdin);
+    freopen("/home/leksus/competitive-programming/IO/input.txt", "r", stdin);
 #endif
 
     int n, m;

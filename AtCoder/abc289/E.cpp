@@ -19,7 +19,7 @@ ii unhash(ll n) { return { n / 10'000, n % 10'000 }; }
 
 int main() {
 #ifdef LOCALENV
-    freopen("/home/leksus/Data/Competitive-Programming/IO/input.txt", "r", stdin);
+    freopen("/home/leksus/competitive-programming/IO/input.txt", "r", stdin);
 #endif
 
     int TC;

@@ -163,8 +163,8 @@ class RSQSegmentTree {
 
 int main() {
 #ifdef LOCALENV
-    freopen("/home/leksus/Data/Competitive-Programming/IO/input.txt", "r", stdin);
-    freopen("/home/leksus/Data/Competitive-Programming/IO/output.txt", "w", stdout);
+    freopen("/home/leksus/competitive-programming/IO/input.txt", "r", stdin);
+    freopen("/home/leksus/competitive-programming/IO/output.txt", "w", stdout);
 #endif
 
     for (int i = 1; i < 1e5; i++) {

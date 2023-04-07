@@ -44,7 +44,7 @@ void find_articulation_bridges(int u) {
 
 int main() {
 #ifdef LOCALENV
-    freopen("/home/leksus/Data/Competitive-Programming/IO/input.txt", "r", stdin);
+    freopen("/home/leksus/competitive-programming/IO/input.txt", "r", stdin);
 #else
     freopen("bridges.in", "r", stdin);
     freopen("bridges.out", "w", stdout);
