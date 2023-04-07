@@ -89,8 +89,8 @@
     "prefix": "ONLINE_JUDGE",
     "body": [
       "#ifdef ONLINE_JUDGE",
-      "freopen(\"${1:filename}.in\", \"r\", stdin);",
-      "freopen(\"${1:filename}.out\", \"w\", stdout);",
+      "freopen(\"${1:/* filename */}.in\", \"r\", stdin);",
+      "freopen(\"${1:/* filename */}.out\", \"w\", stdout);",
       "#endif",
       ""
     ],
@@ -124,5 +124,37 @@
       "};"
     ],
     "description": "Hash function for pairs to use in standart containers"
+  },
+
+  "Ready-to-go template for C++": {
+    "scope": "cpp",
+    "prefix": "cpptemplate",
+    "body": [
+      "#ifndef LOCALENV",
+      "#pragma GCC optimize(\"O3,unroll-loops\")",
+      "#pragma GCC target(\"avx2,bmi,bmi2,lzcnt,popcnt\")",
+      "#endif",
+      "",
+      "#include <bits/stdc++.h>",
+      "using namespace std;",
+      "typedef long long ll;",
+      "typedef long double ld;",
+      "",
+      "void solve() {",
+      "    ${1:/* Your code */}",
+      "}",
+      "",
+      "signed main() {",
+      "    ios_base::sync_with_stdio(false);",
+      "    cin.tie(NULL);",
+      "    int TC = 1;",
+      "    // cin >> TC;",
+      "    while (TC--) {",
+      "        solve();",
+      "    }",
+      "    cout.flush();",
+      "}"
+    ],
+    "description": "Ready-to-go template for C++"
   }
 }
