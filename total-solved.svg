@@ -1,0 +1,14 @@
+<svg width="131.5" height="20" viewBox="0 0 1315 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Problems solved: 440">
+  <title>Problems solved: 440</title>
+  <g>
+    <rect fill="#555" width="1005" height="200"/>
+    <rect fill="#E43" x="1005" width="310" height="200"/>
+  </g>
+  <g aria-hidden="true" fill="#fff" text-anchor="start" font-family="Verdana,DejaVu Sans,sans-serif" font-size="110">
+    <text x="60" y="148" textLength="905" fill="#000" opacity="0.1">Problems solved</text>
+    <text x="50" y="138" textLength="905">Problems solved</text>
+    <text x="1060" y="148" textLength="210" fill="#000" opacity="0.1">440</text>
+    <text x="1050" y="138" textLength="210">440</text>
+  </g>
+  
+</svg>
